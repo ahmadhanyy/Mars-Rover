@@ -6,68 +6,20 @@ function moveForward(rover, obstacles) {
     const movement = {
         [Directions.NORTH]: () => {
             // Check if there is an obstacle in the next position
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x && obstacle[1] === rover.y + 1});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === rover.x && obstacles[i][1] === (rover.y + 1)) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.y += 0;
-            }
-            else {
-                rover.y += 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x && obstacle[1] === rover.y + 1);
+            rover.y += isObstacle ? 0 : 1;
         },
         [Directions.SOUTH]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x && obstacle[1] === rover.y - 1});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === rover.x && obstacles[i][1] === (rover.y - 1)) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.y += 0;
-            }
-            else {
-                rover.y -= 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x && obstacle[1] === rover.y-+ 1);
+            rover.y -= isObstacle ? 0 : 1;
         },
         [Directions.EAST]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x + 1 && obstacle[1] === rover.y});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === (rover.x + 1) && obstacles[i][1] === rover.y) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.x += 0;
-            }
-            else {
-                rover.x += 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x + 1 && obstacle[1] === rover.y);
+            rover.x += isObstacle ? 0 : 1;
         },
         [Directions.WEST]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x - 1 && obstacle[1] === rover.y});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === (rover.x - 1) && obstacles[i][1] === rover.y) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.x += 0;
-            }
-            else {
-                rover.x -= 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x - 1 && obstacle[1] === rover.y);
+            rover.x -= isObstacle ? 0 : 1;
         },
     };
     movement[rover.direction]();
@@ -78,68 +30,20 @@ function moveBackward(rover, obstacles) {
     const movement = {
         [Directions.NORTH]: () => {
             // Check if there is an obstacle in the next position
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x && obstacle[1] === rover.y - 1});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === rover.x && obstacles[i][1] === (rover.y - 1)) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.y += 0;
-            }
-            else {
-                rover.y -= 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x && obstacle[1] === rover.y - 1);
+            rover.y -= isObstacle ? 0 : 1;
         },
         [Directions.SOUTH]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x && obstacle[1] === rover.y + 1});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === rover.x && obstacles[i][1] === (rover.y + 1)) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.y += 0;
-            }
-            else {
-                rover.y += 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x && obstacle[1] === rover.y + 1);
+            rover.y += isObstacle ? 0 : 1;
         },
         [Directions.EAST]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x - 1 && obstacle[1] === rover.y});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === (rover.x - 1) && obstacles[i][1] === rover.y) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.x += 0;
-            }
-            else {
-                rover.x -= 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x - 1 && obstacle[1] === rover.y);
+            rover.x -= isObstacle ? 0 : 1;
         },
         [Directions.WEST]: () => {
-            //const isObstacle = obstacles.filter((obstacle) => {obstacle[0] === rover.x + 1 && obstacle[1] === rover.y});
-            let isObstacle = false;
-            for (let i = 0; i < obstacles.length; i++) {
-                if (obstacles[i][0] === (rover.x + 1) && obstacles[i][1] === rover.y) {
-                    isObstacle = true;
-                    break;
-                }
-            }
-            if (isObstacle == true) {
-                rover.x += 0;
-            }
-            else {
-                rover.x += 1;
-            }
+            const isObstacle = obstacles.some(obstacle => obstacle[0] === rover.x + 1 && obstacle[1] === rover.y);
+            rover.x += isObstacle ? 0 : 1;
         },
     };
     movement[rover.direction]();
