@@ -6,7 +6,7 @@ This project simulates the movement of a rover on mars. The rover can move in di
 
 
 ### Features
-- The rover can take commands to move forward and backward and rotate left and right.
+- The rover can take commands to move forward (F) and backward (B) and rotate left (L) and right (R).
 - The rover avoids obstacles and stops when it face one.
 - The rover can find the shortest path to a given position avoiding the obstacles.
 
