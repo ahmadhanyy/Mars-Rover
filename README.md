@@ -6,21 +6,20 @@ This project simulates the movement of a rover on mars. The rover can move in di
 
 
 ### Features
-- The rover can move forward and backward.
-- The rover can rotate left and right.
-- The rover avoids obstacles and stops when it encounters one.
-- The project uses a grid-based system to track rover position and direction.
+- The rover can take commands to move forward and backward and rotate left and right.
+- The rover avoids obstacles and stops when it face one.
+- The rover can find the shortest path to a given position avoiding the obstacles.
 
 
 ### Technologies Used
-- JavaScript (ES6)
-- Node.js (For running the JavaScript files)
+- JavaScript
+- Node.js
 - Jest (For unit testing)
 
 
 ### Prerequisites
 
-- **Node.js**: Ensure you have Node.js installed.
+- Node.js:  Ensure you have Node.js installed.
 
 
 ### How to Run
