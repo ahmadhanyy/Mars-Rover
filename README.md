@@ -32,7 +32,7 @@ This project simulates the movement of a rover on mars. The rover can move in di
 3. Run the program:
    `npm run dev`
 4. Run unit tests:
-   `npm run test`
+   `npm test`
 
 
 ### Example Input/Output
